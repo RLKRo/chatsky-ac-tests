@@ -1,0 +1,23 @@
+{
+  "answer_1": [
+    ["/start", "Hi! Ask me questions about Chatsky."],
+    [
+      "What even is chatsky?",
+      "Chatsky is an open-source, Apache 2.0-licensed library that was developed specifically for creating dialog systems."
+    ]
+  ],
+  "answer_2": [
+    ["/start", "Hi! Ask me questions about Chatsky."],
+    [
+      "So how do I install chatsky?",
+      "Chatsky can be installed on your system using pip: `pip install chatsky`."
+    ]
+  ],
+  "no_answer": [
+    ["/start", "Hi! Ask me questions about Chatsky."],
+    [
+      "Who is Alexandr Chatsky?",
+      "I don't have an answer to that."
+    ]
+  ]
+}

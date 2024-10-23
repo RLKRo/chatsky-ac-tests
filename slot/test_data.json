@@ -1,0 +1,20 @@
+{
+  "large_message": [
+    ["/start", "Hi! To finish your order, please provide your email and return bitcoin address in case the order fails."],
+    [
+      "Sure. My email is example_email@example.com and you can return the funds at 3Nxwenay9Z8Lc9JBiywExpnEFiLp6Afp8v.",
+      "Thank you. Your data:\nemail: example_email@example.com\nbitcoin address: 3Nxwenay9Z8Lc9JBiywExpnEFiLp6Afp8v"
+    ]
+  ],
+  "simple_requests": [
+    ["/start", "Hi! To finish your order, please provide your email and return bitcoin address in case the order fails."],
+    [
+      "my_email@emails.com",
+      "You did not provide some of the data:\nemail: my_email@emails.com\nbitcoin address: None"
+    ],
+    [
+      "1FeexV6bAHb8ybZjqQMjJrcCrHGW9sb6uF",
+      "Thank you. Your data:\nemail: my_email@emails.com\nbitcoin address: 1FeexV6bAHb8ybZjqQMjJrcCrHGW9sb6uF"
+    ]
+  ]
+}

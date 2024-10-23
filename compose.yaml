@@ -1,0 +1,22 @@
+services:
+  models_service:
+    build: ./models_service
+    healthcheck:
+      test: curl --fail http://localhost:8000/health || exit 1
+      interval: 1m
+      start_period: 1m
+  slot:
+    build: ./slot
+    depends_on:
+      models_service:
+        condition: service_healthy
+  intent:
+    build: ./intent
+    depends_on:
+      models_service:
+        condition: service_healthy
+  retriaval:
+    build: ./retrieval
+    depends_on:
+      models_service:
+        condition: service_healthy

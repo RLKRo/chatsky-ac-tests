@@ -1,0 +1,23 @@
+{
+  "sell": [
+    ["/start", "Welcome to our service! What would you like to do?"],
+    [
+      "Hi! I'd like to put some of my stuff up for sale.",
+      "It appears you want to sell something."
+    ]
+  ],
+  "buy": [
+    ["/start", "Welcome to our service! What would you like to do?"],
+    [
+      "I'm looking to purchase some tools.",
+      "It appears you want to buy something."
+    ]
+  ],
+  "case_sensitivity": [
+    ["/start", "Welcome to our service! What would you like to do?"],
+    [
+      "I WANT TO BUY A NEW KEYBOARD.",
+      "It appears you want to buy something."
+    ]
+  ]
+}
