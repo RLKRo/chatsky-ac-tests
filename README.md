@@ -20,29 +20,29 @@ endpoints and tests for the pipelines:
 Run tests for the slot pipeline with:
 
 ```bash
-docker compose up -d --build --remove-orphans && docker compose run slot bash ./test.sh
+docker compose up -d --build --remove-orphans --wait && docker compose run slot bash ./test.sh
 ```
 
 ```bash
-docker compose up -d --build --remove-orphans && docker compose run slot bash ./time_test.sh
+docker compose up -d --build --remove-orphans --wait && docker compose run slot bash ./time_test.sh
 ```
 
 Run tests for the intent pipeline with:
 
 ```bash
-docker compose up -d --build --remove-orphans && docker compose run intent bash ./test.sh
+docker compose up -d --build --remove-orphans --wait && docker compose run intent bash ./test.sh
 ```
 
 ```bash
-docker compose up -d --build --remove-orphans && docker compose run intent bash ./time_test.sh
+docker compose up -d --build --remove-orphans --wait && docker compose run intent bash ./time_test.sh
 ```
 
 Run tests for the retrieval pipeline with:
 
 ```bash
-docker compose up -d --build --remove-orphans && docker compose run retriaval bash ./test.sh
+docker compose up -d --build --remove-orphans --wait && docker compose run retriaval bash ./test.sh
 ```
 
 ```bash
-docker compose up -d --build --remove-orphans && docker compose run retriaval bash ./time_test.sh
+docker compose up -d --build --remove-orphans --wait && docker compose run retriaval bash ./time_test.sh
 ```

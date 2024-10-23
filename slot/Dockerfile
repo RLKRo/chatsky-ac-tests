@@ -7,10 +7,11 @@ COPY requirements.txt requirements.txt
 RUN ["python", "-m", "pip", "install", "-r", "requirements.txt"]
 
 COPY bot ./bot
+COPY app.py .
 COPY __init__.py .
 COPY test.py .
 COPY test_data.json .
 COPY test.sh .
 COPY time_test.sh .
 
-CMD exit 0
+CMD ["python", "app.py"]
