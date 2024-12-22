@@ -10,9 +10,9 @@ from models.retrieval import get_answer
 app = FastAPI()
 
 
-app.get("/slot")(extract_slot)
-app.get("/intent")(get_intent)
-app.get("/retrieve")(get_answer)
+app.post("/slot")(extract_slot)
+app.post("/intent")(get_intent)
+app.post("/retrieve")(get_answer)
 
 
 class HealthCheck(BaseModel):

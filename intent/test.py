@@ -17,7 +17,7 @@ with open(TEST_DATA_FILE, "r") as fd:
 
 async def get_response(request: str, ctx_id: str):
     async with httpx.AsyncClient() as client:
-        r = await client.get("http://intent:5000/chat", params={"request": request, "ctx_id": ctx_id})
+        r = await client.post("http://intent:5000/chat", params={"request": request, "ctx_id": ctx_id})
     return r.json()["response"]
 
 

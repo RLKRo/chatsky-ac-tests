@@ -15,7 +15,7 @@ class HTTPMessengerInterface(MessengerInterface):
         class Output(BaseModel):
             response: Optional[str]
 
-        @app.get("/chat")
+        @app.post("/chat")
         async def respond(
             ctx_id: str,
             request: str,
