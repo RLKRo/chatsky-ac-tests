@@ -4,6 +4,10 @@ from typing import Optional
 from pydantic import BaseModel
 
 
+class Input(BaseModel):
+    request: str
+
+
 class IntentModel(BaseModel):
     result: Optional[str]
 
@@ -15,9 +19,9 @@ intents = {
 
 
 async def get_intent(
-    request: str
+    request: Input
 ) -> IntentModel:
     for intent, pattern in intents.items():
-        if pattern.search(request) is not None:
+        if pattern.search(request.request) is not None:
             return IntentModel(result=intent)
     return IntentModel(result=None)

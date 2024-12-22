@@ -14,6 +14,10 @@ faq_dataset = {
 }
 
 
+class Input(BaseModel):
+    request: str
+
+
 class AnswerModel(BaseModel):
     result: Optional[str]
 
@@ -22,10 +26,10 @@ THRESHOLD = 5
 
 
 async def get_answer(
-    request: str
+    request: Input
 ) -> AnswerModel:
     questions = list(map(lambda x: "<Q>" + x, faq_dataset.keys()))
-    q_emb, *faq_emb = model.encode(["<Q>" + request] + questions)
+    q_emb, *faq_emb = model.encode(["<Q>" + request.request] + questions)
 
     scores = list(map(lambda x: np.linalg.norm(x - q_emb), faq_emb))
 

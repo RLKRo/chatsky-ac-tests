@@ -6,7 +6,7 @@ from chatsky import Message
 
 async def extract(request: Message, regexp: str):
     async with httpx.AsyncClient() as client:
-        r = await client.post("http://models_service:8000/slot", params={"request": request.text, "regexp": regexp})
+        r = await client.post("http://models_service:8000/slot", json={"request": request.text, "regexp": regexp})
 
     result = r.json()["result"]
 

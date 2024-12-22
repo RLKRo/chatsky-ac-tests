@@ -12,15 +12,16 @@ class HTTPMessengerInterface(MessengerInterface):
     async def connect(self, pipeline_runner):
         app = FastAPI()
 
+        class Input(BaseModel):
+            ctx_id: str
+            request: str
+
         class Output(BaseModel):
             response: Optional[str]
 
         @app.post("/chat")
-        async def respond(
-            ctx_id: str,
-            request: str,
-        ) -> Output:
-            context = await pipeline_runner(Message(text=request), ctx_id)
+        async def respond(request: Input) -> Output:
+            context = await pipeline_runner(Message(text=request.request), request.ctx_id)
             return Output(response=context.last_response.text)
 
         class HealthCheck(BaseModel):
