@@ -1,0 +1,10 @@
+services:
+  slot:
+    ports:
+      - "19001:5000"
+  intent:
+    ports:
+      - "19002:5000"
+  retriaval:
+    ports:
+      - "19003:5000"
